@@ -205,13 +205,13 @@ function isYoutube(str) {
     });
 
 
-const devs = ["466425075487342615"];
-const adminprefix = ["$v"];
+const devs = ["495572697804177408"];
+const adminprefix = ["$"];
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!devs.includes(message.author.id)) return;
 
-  if (message.content.startsWith(adminprefix + 'g')) {
+  if (message.content.startsWith(adminprefix + 'pl')) {
     client.user.setGame(argresult);
       message.channel.send(`**✅ تم تغيير الحالة بنجاح ${argresult}**`)
   } else
@@ -226,7 +226,7 @@ client.on('message', message => {
   client.user.setActivity(argresult , {type:'LISTENING'});
       message.channel.send(`**✅ تم تغيير الحالة بنجاح ${argresult}**`)
   } else
-  if (message.content.startsWith(adminprefix + 's')) {
+  if (message.content.startsWith(adminprefix + 'st')) {
     client.user.setGame(argresult, "https://www.twitch.tv/idk");
       message.channel.send(`**✅ تم تغيير الحالة بنجاح **`)
   }
@@ -1327,13 +1327,6 @@ setInterval(function(){})
 
 
 
-client.on('guildCreate', guild => {
-  client.channels.get("504917731234283571").send(`:white_check_mark: **تم اضافة البوت في سيرفر جديد مبروكك
-Server name: __${guild.name}__
-Server owner: __${guild.owner}__
-Server id: __${guild.id}__ 
-Server Count: __${guild.memberCount}__**`)
-});
 
 
 
